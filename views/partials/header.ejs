@@ -3,7 +3,6 @@
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
       <a href="/" class="flex items-center">
         <img src="images/logo.png" style="scale: 150%;" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-        <!-- <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">SkyCast</span> -->
       </a>
       <div class="flex items-center lg:order-2" id="loginStatus">
 
@@ -57,6 +56,18 @@
 </header>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggleBtn = document.querySelector("[data-collapse-toggle]");
+    const menu = document.getElementById(menuToggleBtn.getAttribute("aria-controls"));
+
+    menuToggleBtn.addEventListener("click", function() {
+      const expanded = menuToggleBtn.getAttribute("aria-expanded") === "true";
+
+      menuToggleBtn.setAttribute("aria-expanded", !expanded);
+      menu.classList.toggle("hidden");
+    });
+  });
+
   currentPath = window.location.pathname;
 
   // Get all navigation links
