@@ -1,0 +1,16 @@
+<%- include('layout/layout' , {title: "SkyCast" , isAuthenticated: isAuthenticated, body: `
+
+<div class="flex flex-row justify-between justify-items-center items-center mx-auto max-w-full">
+
+<div class="flex flex-col justify-between mx-auto">
+  <h3 class="mb-2">Welcome to SkyCast app</h3>
+  <h1 class="text-3xl mb-10">Get The Latest Weather Info of Your City</h1>
+  <a href="/weather" class="border border-black text-center bg-gray-600 text-white rounded-xl py-1 mt-2 shadow-xl w-1/5 font-bold hover:bg-green-400">Check Now</a>
+</div>
+<div class="mx-auto py-44">
+  <img class="w-64 h-96 my-1.5" src="/images/wallpaper.jpg">
+</div>
+
+</div>
+
+`}) %>

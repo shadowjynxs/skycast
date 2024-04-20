@@ -1,0 +1,57 @@
+<%- include('layout/layout' , {title: "SkyCast" , isAuthenticated: isAuthenticated, body: ` <div
+  class="mx-5 my-10 relative top-1/4" id="searchBar">
+  <div
+    class="flex flex-row justify-between border border-black text-white bg-black w-full md:w-1/3 mx-auto my-20 rounded-full">
+    <div class="flex-grow">
+      <input class="text-white bg-black ml-5 py-2 w-full focus:outline-none" placeholder="Enter City Name" id="cityName"
+        type="text">
+    </div>
+    <div class="flex-none">
+      <button id="searchButton" class="rounded-full m-0.5 py-2 px-4 bg-blue-400">Search</button>
+    </div>
+  </div>
+  </div>
+
+  <div class="weatherBox" id="weatherBox">
+    <div class="flex flex-col items-center justify-center w-screen text-gray-700 p-10 ">
+
+      <!-- Component Start -->
+      <div class="w-full max-w-screen-sm bg-white p-10 rounded-xl ring-8 ring-white ring-opacity-40">
+        <div class="flex justify-between" id="currentUpdate">
+          
+        </div>
+        <div class="flex justify-between mt-12" id="hourUpdate">
+
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="flex flex-col space-y-6 w-full max-w-screen-sm bg-white p-10 mt-10 rounded-xl ring-8 ring-white ring-opacity-40" id="dailyUpdate">
+
+
+      </div>
+      <!-- Component End  -->
+
+    </div>
+  </div>
+
+  ` }); %>
+
+<script>
+  var box = document.getElementById('weatherBox');
+  box.classList.add("invisible")
+
+  var navbar = document.getElementById('footer');
+  navbar.classList.add("bottom-0")
+  navbar.classList.add("absolute")
+
+
+  // var searchBar = document.getElementById('searchBar');
+  // searchBar.classList.remove('my-10')
+  // searchBar.classList.remove('mx-5')
+  // searchBar.classList.add('my-auto')
+  // searchBar.classList.add('mx-auto')
+</script>
